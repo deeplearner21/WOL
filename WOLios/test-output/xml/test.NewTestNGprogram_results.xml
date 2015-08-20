@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="64.384">
+  <properties />
+  
+  
+            <testcase name="loginTest" time="51.420" classname="test.NewTestNGprogram" />
+                <testcase name="homescreenTest" time="12.964" classname="test.NewTestNGprogram" />
+      
+</testsuite>

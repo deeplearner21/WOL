@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="45745" started-at="2015-08-20T11:59:08Z" finished-at="2015-08-20T11:59:54Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="45745" started-at="2015-08-20T11:59:08Z" finished-at="2015-08-20T11:59:54Z">
+      <class name="test.WOLiOSautomation">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.WOLiOSautomation@67528259]" name="beforeMethod" is-config="true" duration-ms="20793" started-at="2015-08-20T17:29:08Z" finished-at="2015-08-20T17:29:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="test()[pri:0, instance:test.WOLiOSautomation@67528259]" name="test" duration-ms="24936" started-at="2015-08-20T17:29:29Z" finished-at="2015-08-20T17:29:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.WOLiOSautomation@67528259]" name="afterMethod" is-config="true" duration-ms="0" started-at="2015-08-20T17:29:54Z" finished-at="2015-08-20T17:29:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- test.WOLiOSautomation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
