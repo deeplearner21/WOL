@@ -37,9 +37,9 @@ public class ExcelUtils {
 
 		//read excel file and set data to USER_DETAILS list
 		FileInputStream fstream = null;
-		FileOutputStream ostream = null;
+		//FileOutputStream ostream = null;
 		XSSFCell cell1 = null;
-		XSSFCell cell2 = null;
+		//XSSFCell cell2 = null;
 		File fileName = new File("//Users//deepti.pandey//Documents//Old-data//Selenium//TestData//WOLTestcases_12thAug.xlsx");
 
 		try{
@@ -47,23 +47,28 @@ public class ExcelUtils {
 			fstream = new FileInputStream(fileName);
 			XSSFWorkbook myWorkBook = new XSSFWorkbook (fstream);
 			XSSFSheet mySheet = myWorkBook.getSheet("TestUsers");
+
 			Iterator<Row> rowIterator = mySheet.iterator();
-			while (rowIterator.hasNext()) {
+			while (rowIterator.hasNext())
+			{
 				Row row = rowIterator.next();
 
-				if (row.getRowNum()==0) {
+				if (row.getRowNum()==0)
+				{
 					continue;  //just skip the rows if row number is 0
 				}
 				Iterator<Cell> cellIterator = row.cellIterator();
 
 				int cellCounter=0;
 				UserDetails userDetails =new UserDetails();
-				while (cellIterator.hasNext()) {
-					//properties.clear();
+				
+				while (cellIterator.hasNext())
+				{
 					cell1 = (XSSFCell) cellIterator.next();
 					String data = cell1.getRichStringCellValue().toString();
 
-					switch (cellCounter) {
+					switch (cellCounter++)
+					{
 					case 0:
 						userDetails.setUserName(data);
 						break;
@@ -77,7 +82,7 @@ public class ExcelUtils {
 
 				}// inner while
 				USER_DETAILS.add(userDetails);
-				
+
 			}// outer while
 
 		} catch (FileNotFoundException ex){
@@ -93,7 +98,7 @@ public class ExcelUtils {
 				//   Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
 			}
 		} 
-		
+
 	}
 
 
@@ -103,23 +108,23 @@ public class ExcelUtils {
 
 
 
-private  static void initializeTestCaseData(){
+	private  static void initializeTestCaseData(){
 
-	//read excel file related to test case  and initlize into different class which will be like userdetail
+		//read excel file related to test case  and initlize into different class which will be like userdetail
 
-}
+	}
 
-public void writeExcelFile(){
-	
-}
+	public void writeExcelFile(){
+
+	}
 
 
 	private  final static String getDateTime()
-    {
-        DateFormat df = new SimpleDateFormat("yyyyMMdd_hhmmss");
-        df.setTimeZone(TimeZone.getTimeZone("IST"));
-        return df.format(new Date());
-    }
+	{
+		DateFormat df = new SimpleDateFormat("yyyyMMdd_hhmmss");
+		df.setTimeZone(TimeZone.getTimeZone("IST"));
+		return df.format(new Date());
+	}
 
-	
+
 }
